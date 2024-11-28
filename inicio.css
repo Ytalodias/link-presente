@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url("imagens/arco.png"), auto;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://i.ibb.co/cCX9PSB/fundo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  z-index: -1;
+  cursor: url("imagens/arco.png"), auto;
+}
+
+.voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  display: block;
+  height: 45px;
+  width: 100px;
+  background-color: RGB(251, 151, 151);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+  transform: scale(1.1);
+  filter: brightness(0.6);
+}
+
+a {
+  text-decoration: none;
+}
+
+.icones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  cursor: url("imagens/arco.png"), auto;
+}
+
+.icones img {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.texto {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: 20px;
+  text-shadow: 1px 1px 0 black,
+      1px 1px 0 black,
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black;
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.animation:hover {
+  transform: scale(1.1);
+  filter: brightness(0.6);
+}
+
+@media (max-width: 768px) {
+  .icones {
+    flex-direction: row;
+  }
+
+  .icon-container {
+    margin: 10px;
+  }
+
+  .imagens {
+    height: 120px;
+    width: 120px;
+  }
+
+  .texto {
+    font-size: 16px;
+  }
+
+  .voltar {
+    top: 10px;
+    left: 10px;
+  }
+
+  button {
+    height: 40px;
+    width: 90px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 750px) {
+  .icones {
+    gap: 15px;
+  }
+
+  .icon-container {
+    margin: 10px;
+  }
+
+  .icones img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .texto {
+    font-size: 14px;
+  }
+
+  .voltar {
+    top: 10px;
+    left: 10px;
+  }
+
+  button {
+    height: 200px;
+    width: 250px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .voltar {
+    top: 5px;
+    left: 5px;
+  }
+
+  button {
+    height: 150px;
+    width: 220px;
+    font-size: 18px;
+  }
+}

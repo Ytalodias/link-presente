@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    flex-direction: column;
+    cursor: url("https://i.ibb.co/0CZqfDv/h.png"), auto;
+}
+
+.background {
+    position: fixed;
+    background-image: url(https://i.ibb.co/Kq7TwKM/hello-kitty.png);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+.caderno {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    min-height: 400px;
+    padding: 20px;
+    border: 1px solid #CCC;
+    background-color: #6F509C;
+    background-image: linear-gradient(to bottom, #000000 1px, transparent 1px);
+    background-size: 100% 30px;
+    text-align: left;
+    line-height: 1.5;
+    border-radius: 10px;
+    border-color: #000000;
+    overflow: hidden;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.solo {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 90px;
+    width: 75px;
+    background-size: cover;
+    z-index: 1;
+}
+
+.texto {
+    color: white;
+    font-size: 18px;
+    padding-top: 106px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 120px;
+    line-height: 30px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: calc(100% - 40px);
+    white-space: normal;
+}
+
+.duo {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    height: 140px;
+    width: 150px;
+    background-size: cover;
+    z-index: 1;
+}
+
+button {
+    height: 7vh;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:  #6F509C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .caderno {
+        width: 85%;
+        min-height: 350px;
+        padding: 15px;
+        top: 0;
+        margin-top: 20px;
+        padding-bottom: 180px;
+    }
+
+    .texto {
+        font-size: 16px;
+        padding-right: 15px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .solo {
+        height: 70px;
+        width: 65px;
+    }
+
+    .duo {
+        height: 120px;
+        width: 120px;
+        margin-top: 40px;
+    }
+
+    button {
+        height: 8vh;
+        width: 120px;
+        font-size: 1rem;
+        position: relative;
+    }
+
+    .background {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .caderno {
+        width: 90%;
+        min-height: 300px;
+        padding: 10px;
+        top: 0;
+    }
+
+    .texto {
+        font-size: 14px;
+        padding-right: 10px;
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    .solo {
+        height: 60px;
+        width: 55px;
+    }
+
+    .duo {
+        height: 100px;
+        width: 100px;
+        margin-top: 40px;
+    }
+
+    button {
+        height: 6vh;
+        width: 100px;
+        font-size: 1rem;
+    }
+
+    .background {
+        background-size: cover;
+        background-position: center;
+    }
+}

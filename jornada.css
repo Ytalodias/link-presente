@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: url("https://i.ibb.co/ss4QgsH/icons8-pincel-48.png"), auto;
+}
+
+.background {
+    background-image: url(https://i.ibb.co/48Wg13b/vangogh.png);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+    cursor: url("https://i.ibb.co/ss4QgsH/icons8-pincel-48.png"), auto;
+}
+
+.fotos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moldura {
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.moldura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 7vh;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #6F509C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    z-index: 10;
+}
+
+button:hover {
+    
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .fotos-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .moldura {
+        border: 3px solid rgb(255, 255, 255);
+    }
+
+    button {
+        height: 5vh;
+        width: 80px;
+     
+    }
+}
+
+@media (max-width: 480px) {
+    .fotos-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .moldura {
+        border: 2px solid rgb(255, 255, 255);
+    }
+
+    button {
+        height: 4vh;
+        width: 70px;
+     
+    }
+}

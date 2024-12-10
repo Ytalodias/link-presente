@@ -59,5 +59,17 @@ background: #24062D;
 
 }
 
+#rodape {
+    background-color: rgb(27, 26, 26);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Garante que o footer não sobreponha conteúdo */
+    bottom: 0;
+    width: 100%;
+    font-family: 'Bangers', cursive;
+    font-size: 14px;
+    border-top: 2px solid white; /* Dá destaque ao rodapé */
+}
 
 

@@ -171,3 +171,15 @@ a {
     font-size: 18px;
   }
 }
+#rodape {
+    background-color: rgb(27, 26, 26);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Fixar na parte inferior da tela */
+    bottom: 0;
+    width: 100%;
+    font-family: 'Bangers', cursive;
+    font-size: 14px;
+    border-top: 2px solid white;
+}

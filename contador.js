@@ -4,13 +4,20 @@ function updateCounter() {
     const now = new Date();
     const timeDiff = now - startDate;
 
-    const years = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365));
-    const days = Math.floor((timeDiff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+    const totalDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+    const years = Math.floor(totalDays / 365);
+    const remainingDaysAfterYears = totalDays % 365;
+
+    const months = Math.floor(remainingDaysAfterYears / 30.4375); // Média de dias por mês
+    const days = Math.floor(remainingDaysAfterYears % 30.4375);
+
     const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
     document.getElementById('years').textContent = years;
+    document.getElementById('months').textContent = months;
     document.getElementById('days').textContent = days;
     document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
     document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
@@ -20,6 +27,7 @@ function updateCounter() {
 updateCounter();
 setInterval(updateCounter, 1000);
 
+// Botão secreto (modo Coraline 🌕🧵)
 const secretButton = document.getElementById('secretButton');
 const tempoDiv = document.querySelector('.tempo');
 const iconImage = document.querySelector('.icon img');

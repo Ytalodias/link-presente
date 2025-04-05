@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo da página */
 body, html {
     background-repeat: no-repeat; 
     min-height: 100vh;
@@ -19,21 +21,22 @@ body, html {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
     z-index: -1;
     background-size: cover;
     background-position: center;
 }
 
+/* Ícone */
 .icon img {
     height: 180px;
     width: 170px;
-    position: relative;
     background-size: cover;
 }
 
+/* Bloco do contador */
 .tempo {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: #023C6D;
@@ -48,6 +51,7 @@ body, html {
     height: auto;
 }
 
+/* Cada item do contador */
 .tempo div {
     margin: 0 8px;
     display: flex;
@@ -55,15 +59,18 @@ body, html {
     align-items: center;
 }
 
-#years, #days, #hours, #minutes, #seconds {
+/* Números do contador */
+#years, #months, #days, #hours, #minutes, #seconds {
     font-size: 1em;
     font-weight: bold;
 }
 
-#years-text, #days-text, #hours-text, #minutes-text, #seconds-text {
+/* Textos abaixo dos números */
+#years-text, #months-text, #days-text, #hours-text, #minutes-text, #seconds-text {
     font-size: 0.5em;
 }
 
+/* Botão de voltar */
 .new-button {
     position: fixed;
     bottom: 12%;
@@ -79,6 +86,7 @@ body, html {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Botão secreto */
 #secretButton {
     position: fixed;
     bottom: 15px;
@@ -101,6 +109,7 @@ body, html {
     transform: scale(1.1);
 }
 
+/* Modo Coraline */
 body.other-world {
     background-image: url(https://i.ibb.co/93F10YL/Fundo-Coraline.jpg);
     color: #000;
@@ -113,6 +122,7 @@ body.other-world {
     color: rgb(0, 0, 0);
 }
 
+/* Responsividade */
 @media (max-width: 750px) {
     .tempo {
         font-size: 4.5vw;
@@ -124,11 +134,11 @@ body.other-world {
         width: 140px;
     }
 
-    #years, #days, #hours, #minutes, #seconds {
+    #years, #months, #days, #hours, #minutes, #seconds {
         font-size: 0.9em;
     }
 
-    #years-text, #days-text, #hours-text, #minutes-text, #seconds-text {
+    #years-text, #months-text, #days-text, #hours-text, #minutes-text, #seconds-text {
         font-size: 0.4em;
     }
 
